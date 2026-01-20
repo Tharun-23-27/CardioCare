@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Cardiac Awareness Dashboard</h1>
+
+<a href="/health" class="small-btn">New Heart Risk Check</a>
+
+<h2>Previous Health Reports</h2>
+
+{% if records %}
+<table class="report-table">
+    <tr>
+        <th>Age</th>
+        <th>BP</th>
+        <th>Sugar</th>
+        <th>Smoking</th>
+        <th>Family History</th>
+        <th>Risk</th>
+    </tr>
+
+    {% for r in records %}
+    <tr>
+        <td>{{ r["age"] }}</td>
+        <td>{{ r["bp"] }}</td>
+        <td>{{ r["sugar"] }}</td>
+        <td>{{ r["smoking"] }}</td>
+        <td>{{ r["family_history"] }}</td>
+        <td>{{ r["risk"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No health reports found.</p>
+{% endif %}
+
+</body>
+</html>

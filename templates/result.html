@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Risk Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Your Heart Health Risk</h2>
+
+    <h3>Risk Level: {{ risk }}</h3>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

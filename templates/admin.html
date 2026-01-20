@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <section class="home-title">
+        <h1>Admin Dashboard</h1>
+        <p>Overview of system usage and health data</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Health Check Summary</h2>
+        <p>Total Health Checks: <strong>{{ total_checks }}</strong></p>
+        <p>High Risk: <strong>{{ high_risk }}</strong></p>
+        <p>Medium Risk: <strong>{{ medium_risk }}</strong></p>
+        <p>Low Risk: <strong>{{ low_risk }}</strong></p>
+    </section>
+
+    <section class="info-section">
+        <h2>Registered Users</h2>
+
+        {% if users %}
+        <table style="width:100%; background:white; border-collapse:collapse;">
+            <tr>
+                <th style="border:1px solid #ccc; padding:8px;">Name</th>
+                <th style="border:1px solid #ccc; padding:8px;">Email</th>
+            </tr>
+
+            {% for user in users %}
+            <tr>
+                <td style="border:1px solid #ccc; padding:8px;">{{ user["name"] }}</td>
+                <td style="border:1px solid #ccc; padding:8px;">{{ user["email"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p>No users found.</p>
+        {% endif %}
+    </section>
+
+    <section class="home-actions">
+        <a href="/" class="btn secondary">Back to Home</a>
+    </section>
+
+</body>
+</html>

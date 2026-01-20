@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Health Check</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Heart Health Risk Check</h2>
+
+    <form method="POST" action="/health">
+        <label>Age:</label><br>
+        <input type="number" name="age"><br><br>
+
+        <label>Blood Pressure (systolic):</label><br>
+        <input type="number" name="bp"><br><br>
+
+        <label>Blood Sugar Level:</label><br>
+        <input type="number" name="sugar"><br><br>
+
+        <label>Smoking:</label><br>
+        <select name="smoking">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select><br><br>
+
+        <label>Family History of Heart Disease</label>
+        <select name="family_history" required>
+              <option value="">-- Select --</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+        </select>
+
+
+        <button type="submit">Check Risk</button>
+    </form>
+</body>
+</html>

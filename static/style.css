@@ -1,0 +1,320 @@
+/* ---------- GLOBAL ---------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.btn.secondary {
+    background-color: #555;
+}
+
+/* ---------- FORMS (LOGIN / REGISTER) ---------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004c99;
+}
+
+/* ---------- HOME PAGE ---------- */
+.home-title {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.home-title p {
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* ---------- HOME ACTION BUTTONS ---------- */
+.home-actions {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* ---------- AWARENESS PAGE ---------- */
+.awareness-title {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.awareness-title p {
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.awareness-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.awareness-section ul {
+    padding-left: 20px;
+}
+
+.awareness-section li {
+    margin-bottom: 6px;
+}
+
+/* Dashboard button */
+.small-btn {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.small-btn:hover {
+    background-color: #004c99;
+}
+
+/* Health report table */
+.report-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.report-table th {
+    background-color: #f0f0f0;
+}
+/* ---------------- LANDING PAGE ADVANCED UI ---------------- */
+
+body.landing {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-sub {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn.primary {
+    background: #00c6ff;
+    color: #002b36;
+    box-shadow: 0 10px 30px rgba(0,198,255,0.4);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+}
+
+/* 3D Stats Cards */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 260px;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-12px) rotateX(5deg);
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Glass info section */
+.info-glass {
+    max-width: 750px;
+    margin: 60px auto 120px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    text-align: center;
+}
+
+.info-glass h2 {
+    margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
