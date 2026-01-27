@@ -1,38 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Heart Health Check</title>
+    <meta charset="UTF-8">
+    <title>Heart Health Risk Check</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
+
 <body>
-    <h2>Heart Health Risk Check</h2>
 
-    <form method="POST" action="/health">
-        <label>Age:</label><br>
-        <input type="number" name="age"><br><br>
+<div class="container">
+    <div class="card">
 
-        <label>Blood Pressure (systolic):</label><br>
-        <input type="number" name="bp"><br><br>
+        <h2>Heart Health Risk Check</h2>
 
-        <label>Blood Sugar Level:</label><br>
-        <input type="number" name="sugar"><br><br>
+        <!-- 🔴 ERROR MESSAGE (SAME PAGE) -->
+        {% if error %}
+        <div class="form-error">
+            {{ error }}
+        </div>
+        {% endif %}
 
-        <label>Smoking:</label><br>
-        <select name="smoking">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-        </select><br><br>
+        <form method="POST" action="/health">
 
-        <label>Family History of Heart Disease</label>
-        <select name="family_history" required>
-              <option value="">-- Select --</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-        </select>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" placeholder="Enter your age" required>
+            </div>
 
+            <div class="form-group">
+                <label>Blood Pressure (Systolic)</label>
+                <input type="number" name="bp" placeholder="e.g. 70 - 120" required>
+            </div>
 
-        <button type="submit">Check Risk</button>
-    </form>
+            <div class="form-group">
+                <label>Blood Sugar Level</label>
+                <input type="number" name="sugar" placeholder="e.g. 50 - 500" required>
+            </div>
+
+            <div class="form-group">
+                <label>Smoking</label>
+                <select name="smoking" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Family History of Heart Disease</label>
+                <select name="family_history" required>
+                    <option value="">-- Select --</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Check Risk</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
 </body>
 </html>

@@ -1,57 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Cardiac Awareness</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <section class="awareness-title">
-        <h1>Cardiac Awareness</h1>
-        <p>
-            Understanding heart health, symptoms, and preventive measures
-            can significantly reduce the risk of cardiac diseases.
-        </p>
-    </section>
+<!-- HERO -->
+<div class="awareness-hero">
+    <h1>Cardiac Awareness</h1>
+    <p>
+        Understanding heart health, symptoms, and preventive measures can
+        significantly reduce the risk of cardiac diseases.
+    </p>
+</div>
 
-    <!-- SYMPTOMS SECTION -->
-    <section class="awareness-section">
-        <h2>Common Heart Attack Symptoms</h2>
-        <ul>
+<!-- CONTENT WRAPPER -->
+<div class="awareness-wrapper">
+
+    <!-- SECTION 1 -->
+    <div class="awareness-section-box">
+        <h2>Heart Attack Symptoms</h2>
+        <p class="section-desc">
+            These symptoms may appear suddenly or build gradually.
+            Early recognition can save lives.
+        </p>
+
+        <ul class="clean-list">
             <li>Chest pain or discomfort</li>
             <li>Shortness of breath</li>
-            <li>Pain in arms, neck, jaw, or back</li>
+            <li>Pain in arms or shoulders</li>
+            <li>Pain in neck, jaw, or back</li>
             <li>Dizziness or lightheadedness</li>
             <li>Unusual fatigue or nausea</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- DIET SECTION -->
-    <section class="awareness-section">
-        <h2>Healthy Diet Tips</h2>
-        <ul>
-            <li>Eat fruits, vegetables, and whole grains</li>
-            <li>Reduce salt, sugar, and saturated fats</li>
+    <!-- SECTION 2 -->
+    <div class="awareness-section-box">
+        <h2>Healthy Diet Guidelines</h2>
+        <p class="section-desc">
+            A heart-friendly diet helps control blood pressure,
+            cholesterol, and blood sugar levels.
+        </p>
+
+        <ul class="clean-list">
+            <li>Fruits, vegetables, and whole grains</li>
+            <li>Lean proteins and healthy fats</li>
+            <li>Limit salt and sugar intake</li>
             <li>Avoid processed and fried foods</li>
-            <li>Drink enough water daily</li>
-            <li>Limit alcohol consumption</li>
+            <li>Drink sufficient water daily</li>
+            <li>Moderate alcohol consumption</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- EXERCISE SECTION -->
-    <section class="awareness-section">
-        <h2>Exercise & Lifestyle Tips</h2>
-        <ul>
-            <li>Engage in at least 30 minutes of physical activity daily</li>
-            <li>Practice yoga or meditation to reduce stress</li>
-            <li>Avoid smoking and tobacco products</li>
-            <li>Maintain a healthy sleep routine</li>
+    <!-- SECTION 3 -->
+    <div class="awareness-section-box">
+        <h2>Preventive Measures</h2>
+        <p class="section-desc">
+            Adopting a healthy lifestyle significantly lowers
+            the risk of heart disease.
+        </p>
+
+        <ul class="clean-list">
+            <li>Exercise at least 30 minutes daily</li>
+            <li>Maintain a healthy body weight</li>
+            <li>Quit smoking completely</li>
+            <li>Manage stress effectively</li>
+            <li>Get regular health checkups</li>
         </ul>
-    </section>
+    </div>
 
-    <section class="home-actions">
-        <a href="/" class="btn secondary">Back to Home</a>
-    </section>
+    <!-- HOME BUTTON -->
+    <div class="awareness-home">
+        <a href="/" class="btn primary">Home</a>
+    </div>
+
+</div>
 
 </body>
 </html>

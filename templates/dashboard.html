@@ -1,42 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Cardiac Awareness Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<h1>Cardiac Awareness Dashboard</h1>
+<div class="dashboard">
 
-<a href="/health" class="small-btn">New Heart Risk Check</a>
+    <!-- TOP BAR -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+        <h1 style="margin:0;">Cardiac Awareness Dashboard</h1>
 
-<h2>Previous Health Reports</h2>
+        <!-- LOGOUT BUTTON -->
+        <a href="{{ url_for('logout') }}" class="btn secondary small-btn">
+            Logout
+        </a>
+    </div>
 
-{% if records %}
-<table class="report-table">
-    <tr>
-        <th>Age</th>
-        <th>BP</th>
-        <th>Sugar</th>
-        <th>Smoking</th>
-        <th>Family History</th>
-        <th>Risk</th>
-    </tr>
+    <!-- ACTION BUTTON -->
+    <div style="margin: 10px 0 40px 0;">
+        <a href="{{ url_for('health') }}" class="btn primary">
+            New Heart Risk Check
+        </a>
+    </div>
 
+    <!-- TABLE TITLE -->
+    <h2 style="margin-bottom: 20px;">Previous Health Reports</h2>
+
+    <!-- HEALTH REPORT TABLE -->
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>BP</th>
+                <th>Sugar</th>
+                <th>Smoking</th>
+                <th>Family History</th>
+                <th>Risk</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for r in records %}
+            <tr>
+                <td>{{ r.age }}</td>
+                <td>{{ r.bp }}</td>
+                <td>{{ r.sugar }}</td>
+                <td>{{ r.smoking }}</td>
+                <td>{{ r.family_history }}</td>
+                <td>
+                    {% if r.risk == "High" %}
+                        <span style="color:red; font-weight:600;">High</span>
+                    {% elif r.risk == "Medium" %}
+                        <span style="color:orange; font-weight:600;">Medium</span>
+                    {% else %}
+                        <span style="color:green; font-weight:600;">Low</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- HIGH RISK ALERT -->
+    {% set has_high_risk = false %}
     {% for r in records %}
-    <tr>
-        <td>{{ r["age"] }}</td>
-        <td>{{ r["bp"] }}</td>
-        <td>{{ r["sugar"] }}</td>
-        <td>{{ r["smoking"] }}</td>
-        <td>{{ r["family_history"] }}</td>
-        <td>{{ r["risk"] }}</td>
-    </tr>
+        {% if r.risk == 'High' %}
+            {% set has_high_risk = true %}
+        {% endif %}
     {% endfor %}
-</table>
-{% else %}
-<p>No health reports found.</p>
-{% endif %}
+
+    {% if has_high_risk %}
+    <div class="info-section" style="border-left:6px solid red; margin-top:40px;">
+        <h3>⚠ Doctor Consultation Recommended</h3>
+        <p>
+            One or more of your health reports indicate a
+            <strong>High Risk</strong>. Please consult a cardiologist
+            immediately and reduce smoking, sugar intake, and unmanaged stress.
+        </p>
+    </div>
+    {% endif %}
+
+</div>
 
 </body>
 </html>
