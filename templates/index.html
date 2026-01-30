@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cardiac Awareness System</title>
+    <meta charset="UTF-8">
+    <title>CardioCare</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<!-- ================= HERO SECTION ================= -->
-<div class="hero section light">
-    <h1 class="hero-title">Cardiac Awareness System</h1>
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1 class="hero-title">CardioCare</h1>
+
     <p class="hero-sub">
-        Early detection saves lives. Track, understand, and reduce heart health risks.
+        Heart Risk Assessment & Awareness Platform  
+        <br>
+        Early detection saves lives. Track, understand, and reduce Cardiac health risks.
     </p>
 
     <div class="hero-actions">
-        <a href="/login" class="btn primary">Login</a>
-        <a href="/register" class="btn secondary">Register</a>
+        <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
     </div>
 
-    <!-- Awareness link (STEP 3 you asked about) -->
     <div class="hero-awareness">
-        <a href="/awareness">Learn about heart health & prevention →</a>
+        <a href="{{ url_for('awareness') }}">
+            Learn about heart health & prevention →
+        </a>
     </div>
 </div>
 
-<!-- ================= STATS SECTION ================= -->
-<div class="section white">
-    <div class="stats-section">
-
-        <div class="stat-card">
-            <h2>17.9M+</h2>
-            <p>Deaths every year due to heart disease</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>80%</h2>
-            <p>Heart attacks are preventable</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>1 in 4</h2>
-            <p>Adults at risk without symptoms</p>
-        </div>
-
+<!-- STATS SECTION -->
+<div class="stats-section">
+    <div class="stat-card">
+        <h2>17.9M+</h2>
+        <p>Deaths every year due to heart disease</p>
     </div>
-</div>
 
-<!-- ================= INFO SECTION ================= -->
-<div class="section light">
-    <div class="info-section">
-        <h2>Why Regular Heart Checkups Matter</h2>
-        <p>
-            Heart diseases often develop silently. Regular monitoring helps
-            identify risks early and take preventive action before complications arise.
-        </p>
+    <div class="stat-card">
+        <h2>80%</h2>
+        <p>Heart attacks are preventable</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>1 in 4</h2>
+        <p>Adults at risk without symptoms</p>
     </div>
 </div>
 
