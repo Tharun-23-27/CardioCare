@@ -1,4 +1,5 @@
-# Cardiac Awareness System
+# # CardioCare – Heart Risk Assessment & Awareness Platform
+
 
 A web-based application built using Flask that helps users assess basic heart disease risk based on health parameters and promotes cardiac awareness.
 
