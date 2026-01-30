@@ -147,7 +147,7 @@ def dashboard():
     ).fetchall()
     conn.close()
 
-    # ✅ Detect high risk properly
+    # ✅ Detect high risk properly 
     has_high_risk = any(r["risk"] == "High" for r in records)
 
     return render_template(
@@ -234,3 +234,5 @@ def logout():
 if __name__ == "__main__":
     create_tables()
     app.run(debug=True)
+
+
