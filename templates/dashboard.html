@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><h1>CardioCare Dashboard</h1>
-</title>
+    <title>CardioCare Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -13,11 +12,8 @@
 <div class="dashboard">
 
     <!-- TOP BAR -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
-        <h1 style="margin:0;"><h1>CardioCare Dashboard</h1>
-</h1>
-
-        <!-- LOGOUT BUTTON -->
+    <div class="dashboard-topbar">
+        <h1>CardioCare Dashboard</h1>
         <a href="{{ url_for('logout') }}" class="btn secondary small-btn">
             Logout
         </a>

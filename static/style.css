@@ -75,7 +75,7 @@ a:hover {
 ================================ */
 .hero {
     text-align: center;
-    padding: 120px 20px 90px;
+    padding: 100px 20px 50px;
     background: #f4f6f8;
 }
 
@@ -114,7 +114,7 @@ a:hover {
     justify-content: center;
     gap: 36px;
     flex-wrap: wrap;
-    padding: 70px 20px;
+    padding: 40px 20px 60px;
 }
 
 .stat-card {
@@ -393,6 +393,20 @@ select:focus {
     margin-bottom: 35px;
 }
 
+.dashboard-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.dashboard-topbar h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
 .logout-btn {
     margin-right: 10px;
 }
@@ -412,6 +426,10 @@ select:focus {
 
 @media (max-width: 768px) {
 
+    .hero {
+        padding: 60px 15px 30px;
+    }
+
     .hero-title {
         font-size: 28px;
     }
@@ -421,9 +439,14 @@ select:focus {
         padding: 0 10px;
     }
 
+    .hero-awareness {
+        margin-top: 14px;
+    }
+
     .stats-section {
         flex-direction: column;
         align-items: center;
+        padding: 20px 15px 40px;
     }
 
     .stat-card {
@@ -433,6 +456,17 @@ select:focus {
 
     .dashboard {
         padding: 30px 15px;
+    }
+
+    .dashboard-topbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .dashboard-topbar h1 {
+        font-size: 22px;
+        flex: 1;
     }
 
     .report-table {
