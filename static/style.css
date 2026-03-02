@@ -405,3 +405,47 @@ select:focus {
 .section-title {
     margin-bottom: 20px;
 }
+
+/* ===============================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-sub {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .dashboard {
+        padding: 30px 15px;
+    }
+
+    .report-table {
+        font-size: 12px;
+    }
+
+    .report-table th,
+    .report-table td {
+        padding: 8px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 25px;
+    }
+}
